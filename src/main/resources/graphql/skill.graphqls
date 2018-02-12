@@ -1,0 +1,22 @@
+schema {
+	query : Query
+}
+
+# The Root Query for the application
+type Query {
+	allSkill: [Skill]
+    skill(graphId: Long): Skill
+}
+
+type Skill {
+    graphId: ID!
+    skillId: String
+    skillName: String!
+    skillDescription : String
+    skillType: String
+}	
+
+# The Root Mutation for the application
+type Mutation {
+    writeSkill(skillName: String, skillDescription: String, skillType: String) : Skill!
+}

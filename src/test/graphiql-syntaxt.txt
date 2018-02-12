@@ -1,0 +1,18 @@
+{
+  allSkill {
+    skillName,
+    skillDescription
+  }
+}
+
+
+mutation {
+  writeSkill (
+    skillName : "NodeJS", 
+    skillDescription : "JS Runtime Environment",
+    skillType : "JS Tool"
+  ) {
+    skillId,
+    skillName
+  }
+}
