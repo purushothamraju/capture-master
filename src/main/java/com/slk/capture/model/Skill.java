@@ -13,6 +13,30 @@ public class Skill {
 	@GraphId
 	private Long graphId;
 
+	public Long getGraphId() {
+		return graphId;
+	}
+
+	public void setGraphId(Long graphId) {
+		this.graphId = graphId;
+	}
+
+	public String getSkillId() {
+		return skillId;
+	}
+
+	public void setSkillId(String skillId) {
+		this.skillId = skillId;
+	}
+
+	public List<Profile> getProfile() {
+		return profile;
+	}
+
+	public void setProfile(List<Profile> profile) {
+		this.profile = profile;
+	}
+
 	@Property(name = "skillId")
 	private String skillId;
 

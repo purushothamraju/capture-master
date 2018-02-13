@@ -6,6 +6,10 @@ schema {
 type Query {
 	allSkill: [Skill]
     skill(graphId: Long): Skill
+    allProfile: [Profile]
+    profile(graphId:Long): Profile
+    allContact: [Contact]
+    contact(graphId:Long): Contact
 }
 
 type Skill {
@@ -14,9 +18,24 @@ type Skill {
     skillName: String!
     skillDescription : String
     skillType: String
+}
+
+type Profile{
+   graphId: ID!
+   profileName: String
+   workstation: String
+   profileDesignation: String  
+}
+type Contact {
+  graphId: ID!
+  mobileNo: Long
+  extension:Int
+  emailId: String
 }	
 
 # The Root Mutation for the application
 type Mutation {
     writeSkill(skillName: String, skillDescription: String, skillType: String) : Skill!
+    writeProfile(profileName: String, workstation:String,profileDesignation:String) : Profile!
+    writeContact(mobileNo:Long,emailId: String,extension:Int): Contact!
 }
